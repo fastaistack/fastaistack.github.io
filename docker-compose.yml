@@ -1,0 +1,33 @@
+version: '3.3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: homepage_web
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./visitor_count.json:/app/visitor_count.json
+    restart: unless-stopped
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8080
+    depends_on:
+      - visitor_counter
+
+  visitor_counter:
+    build:
+      context: ./visitor_counter
+      dockerfile: Dockerfile
+    container_name: visitor_counter
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./visitor_counter/visitor_count.json:/app/visitor_count.json
+    restart: unless-stopped
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8081
+

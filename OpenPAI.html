@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenPAI - Open 系列产品</title>
+    <link rel="icon" type="image/svg+xml" href="images/icons/robot-icon.svg">
+    <link rel="shortcut icon" type="image/svg+xml" href="images/icons/robot-icon.svg">
+    <link rel="stylesheet" href="css/style.css?v=1.1">
+    <link rel="stylesheet" href="css/responsive.css?v=1.1">
+    <link rel="stylesheet" href="css/animations.css?v=1.1">
+</head>
+<body>
+    <!-- 固定导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="Open.html">
+                    <img src="images/icons/robot-icon.svg" alt="Open" class="logo-icon">
+                    <span class="logo-text" data-page="open">Open</span>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="Open.html" class="nav-link">首页</a>
+                <button type="button" class="nav-link github-link" onclick="window.open('https://github.com/fastaistack/OpenPAI', '_blank'); return false;">
+                    <img src="images/icons/github-icon.svg" alt="GitHub" class="nav-icon">
+                </button>
+                <div id="lang-toggle" class="lang-toggle nav-link" aria-label="Switch language">
+                    <div class="lang-track">
+                        <div class="lang-slider"></div>
+                        <span class="lang-option zh">中</span>
+                        <span class="lang-option en">EN</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 产品详情页内容 -->
+    <section id="product-detail" class="page-section open-product-detail-section">
+        <!-- Hero 区域 -->
+        <div class="open-detail-hero">
+            <div class="open-detail-hero-content">
+                <h1 class="open-detail-title">OpenPAI</h1>
+                <p class="open-detail-subtitle">轻量、强大且易用的大模型应用开发平台</p>
+                <p class="open-detail-description">一个轻量、强大且易用的大模型应用开发平台，帮助用户快速部署和交互大模型。平台支持本地、企业服务器及云端模型服务，并提供直观、友好的网页界面，让你轻松构建 AI 应用！</p>
+                <div class="open-detail-actions">
+                    <a href="https://github.com/fastaistack/OpenPAI" target="_blank" class="open-detail-btn open-detail-btn-primary">
+                        <img src="images/icons/github-icon.svg" alt="GitHub" class="open-btn-icon">
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://github.com/fastaistack/OpenPAI" target="_blank" class="open-detail-btn open-detail-btn-secondary">
+                        <span>产品主页</span>
+                    </a>
+                </div>
+            </div>
+            <div class="open-detail-hero-image">
+                <img src="images/mockups/openpai.gif" alt="OpenPAI" class="open-detail-gif">
+            </div>
+        </div>
+
+        <!-- 功能特性区域 -->
+        <div class="open-detail-features">
+            <div class="open-detail-container">
+                <h2 class="open-detail-section-title">核心功能</h2>
+                <div class="open-features-grid">
+                    <div class="open-feature-item">
+                        <div class="open-feature-icon">🚀</div>
+                        <h3 class="open-feature-title">快速部署</h3>
+                        <p class="open-feature-desc">支持本地、企业服务器及云端模型服务的快速部署</p>
+                    </div>
+                    <div class="open-feature-item">
+                        <div class="open-feature-icon">💻</div>
+                        <h3 class="open-feature-title">友好界面</h3>
+                        <p class="open-feature-desc">提供直观、友好的网页界面，轻松构建 AI 应用</p>
+                    </div>
+                    <div class="open-feature-item">
+                        <div class="open-feature-icon">🔧</div>
+                        <h3 class="open-feature-title">灵活配置</h3>
+                        <p class="open-feature-desc">支持多种模型服务配置，满足不同场景需求</p>
+                    </div>
+                    <div class="open-feature-item">
+                        <div class="open-feature-icon">⚡</div>
+                        <h3 class="open-feature-title">高性能</h3>
+                        <p class="open-feature-desc">轻量级设计，强大的性能表现，高效处理大模型交互</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="copyright">
+        <p class="copyright-text">Open 系列产品 - 开源 AI 解决方案</p>
+    </footer>
+
+    <!-- 脚本 -->
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
