@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenChat - 开源免费AI解决方案</title>
+    <title>Fastaistack - 智赋企业，算启新程</title>
     <link rel="icon" type="image/svg+xml" href="images/icons/robot-icon.svg">
     <link rel="shortcut icon" type="image/svg+xml" href="images/icons/robot-icon.svg">
     <link rel="stylesheet" href="css/style.css?v=1.1">
@@ -15,384 +15,245 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="images/icons/robot-icon.svg" alt="OpenChat" class="logo-icon">
-                <span class="logo-text">OpenChat</span>
+                <a href="Open.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+                    <img src="images/icons/robot-icon.svg" alt="Open" class="logo-icon">
+                    <span class="logo-text" data-page="open">OpenForge</span>
+                </a>
             </div>
             <div class="nav-menu">
-                <button type="button" class="nav-link" onclick="window.open('https://github.com/fastaistack/OpenChat/blob/main/README.md', '_blank'); return false;">文档</button>
-                <button type="button" class="nav-link community-btn" onclick="document.getElementById('qr-modal').style.display='flex'; return false;">社群</button>
-                <a href="#faq" class="nav-link">FAQ</a>
-                <button type="button" class="nav-link github-link" onclick="window.open('https://github.com/fastaistack/OpenChat', '_blank'); return false;">
-                    <img src="images/icons/github-icon.svg" alt="GitHub" class="nav-icon">
-                </button>
+                <div class="github-dropdown">
+                    <button type="button" class="nav-link github-link">
+                        <img src="images/icons/github-icon.svg" alt="GitHub" class="nav-icon">
+                    </button>
+                    <div class="github-menu">
+                        <a href="https://github.com/fastaistack/OpenPAI" target="_blank" class="github-option">
+                            <img src="images/icons/github-icon.svg" alt="GitHub" class="github-option-icon">
+                            <span class="github-option-text">OpenPAI</span>
+                        </a>
+                        <a href="https://github.com/fastaistack/OpenChat" target="_blank" class="github-option">
+                            <img src="images/icons/github-icon.svg" alt="GitHub" class="github-option-icon">
+                            <span class="github-option-text">OpenChat</span>
+                        </a>
+                        <a href="https://github.com/fastaistack/OpenStation/tree/master" target="_blank" class="github-option">
+                            <img src="images/icons/github-icon.svg" alt="GitHub" class="github-option-icon">
+                            <span class="github-option-text">OpenStation</span>
+                        </a>
+                    </div>
+                </div>
                 <div id="lang-toggle" class="lang-toggle nav-link" aria-label="Switch language">
-                <div class="lang-track">
-                    <div class="lang-slider"></div>
-                    <span class="lang-option zh">中</span>
-                    <span class="lang-option en">EN</span>
-                </div>
-                </div>
-                <div class="download-dropdown">
-                    <button class="download-btn" onclick="event.preventDefault()">下载客户端</button>
-                    <div class="download-menu">
-                        <a href="https://fastaistack.oss-cn-beijing.aliyuncs.com/openchat/OpenChatSetup_v1.0.4_win.exe" class="download-option" target="_blank">
-                            <div class="">
-                                <img src="images/icons/windows-icon.svg" alt="Windows">
-                            </div>
-                            <div>Windows</div>
-                        </a>
-                        <a href="https://fastaistack.oss-cn-beijing.aliyuncs.com/openchat/OpenChatSetup_v1.0.4_apple.dmg" class="download-option" target="_blank">
-                            <div class="">
-                                <img src="images/icons/mac-icon.svg" alt="Mac M1">
-                            </div>
-                            <div>Mac M芯片</div>
-                        </a>
-                        <a href="https://fastaistack.oss-cn-beijing.aliyuncs.com/openchat/OpenChatSetup_v1.0.4_intel.dmg" class="download-option" target="_blank">
-                            <div class="">
-                                <img src="images/icons/mac-icon.svg" alt="Mac Intel">
-                            </div>
-                            <div>Mac Intel芯片</div>
-                        </a>
-                        <a href="https://fastaistack.oss-cn-beijing.aliyuncs.com/openchat/Openchat_DeepSeek_OCR_win.exe" class="download-option" target="_blank">
-                            <div class="">
-                                <img src="images/icons/windows-icon.svg" alt="Windows">
-                            </div>
-                            <div>Windows DS-OCR</div>
-                        </a>
-                        <a href="https://fastaistack.oss-cn-beijing.aliyuncs.com/openchat/Openchat_DeepSeek_OCR_mac.dmg" class="download-option" target="_blank">
-                            <div class="">
-                                <img src="images/icons/mac-icon.svg" alt="Mac Intel">
-                            </div>
-                            <div>Mac M芯片 DS-OCR</div>
-                        </a>
+                    <div class="lang-track">
+                        <div class="lang-slider"></div>
+                        <span class="lang-option zh">中</span>
+                        <span class="lang-option en">EN</span>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- 页面1: 首页 -->
-    <section id="home" class="page-section home-page">
-        <div class="hero-section">
-            <div class="hero-content">
-                <div class="hero-title">
-                    <img src="images/icons/robot-icon.svg" alt="OpenChat" class="title-icon">
-                    <h1>OpenChat</h1>
-                </div>
-                <p class="hero-description">
-                    开源免费的AI解决方案,保护您的数据安全,提供强大的文档处理和智能助手功能<br>
-                    无需注册!即可开启您的大模型体验!!
-                </p>
-                <div class="download-buttons">
+    <!-- 首页内容 -->
+    <section id="home" class="page-section open-home-section">
+        <!-- 顶部标题区域 -->
+        <div class="open-hero-section">
+            <div class="open-hero-content">
+                <h1 class="open-hero-title">
+                    <span class="open-hero-title-text">Fastaistack</span>
+                    <span class="open-hero-description">智赋企业，算启新程</span>
+                </h1>
+            </div>
+        </div>
 
-                    <div class="download-button-group">
-                        <div class="download-btn-platform">
-                            <img src="images/icons/windows-icon.svg" alt="Windows">
-                            <span>Windows 下载</span>
-                        </div>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" target="_blank" href="https://fastaistack.oss-cn-beijing.aliyuncs.com/openchat/OpenChatSetup_v1.0.4_win.exe">OpenChat V1.0.4</a>
-                            <a class="dropdown-item" target="_blank" href="https://fastaistack.oss-cn-beijing.aliyuncs.com/openchat/Openchat_DeepSeek_OCR_win.exe">OpenChat DS-OCR 试用版</a>
-                        </div>
-                    </div>
-
-                    <div class="download-button-group">
-                        <div class="download-btn-platform">
-                            <img src="images/icons/mac-icon.svg" alt="Mac M1">
-                            <span>Mac M芯片 下载</span>
-                        </div>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" target="_blank" href="https://fastaistack.oss-cn-beijing.aliyuncs.com/openchat/OpenChatSetup_v1.0.4_apple.dmg">OpenChat V1.0.4</a>
-                            <a class="dropdown-item" target="_blank" href="https://fastaistack.oss-cn-beijing.aliyuncs.com/openchat/Openchat_DeepSeek_OCR_mac.dmg">OpenChat DS-OCR 试用版</a>
-                        </div>
-                    </div>
-                    <!--                    <a href="https://fastaistack.oss-cn-beijing.aliyuncs.com/openchat/OpenChatSetup_v1.0.4_win.exe" class="download-btn-platform" target="_blank">-->
-                    <!--                        <img src="images/icons/windows-icon.svg" alt="Windows">-->
-                    <!--                        <span>Windows 下载</span>-->
-                    <!--                    </a>-->
-                    <!--                    <a href="https://fastaistack.oss-cn-beijing.aliyuncs.com/openchat/OpenChatSetup_v1.0.4_apple.dmg" class="download-btn-platform" target="_blank">-->
-                    <!--                        <img src="images/icons/mac-icon.svg" alt="Mac M1">-->
-                    <!--                        <span>Mac M1 下载</span>-->
-                    <!--                    </a>-->
-                    <a href="https://fastaistack.oss-cn-beijing.aliyuncs.com/openchat/OpenChatSetup_v1.0.4_intel.dmg" class="download-btn-platform" target="_blank">
-                        <img src="images/icons/mac-icon.svg" alt="Mac Intel">
-                        <span>Mac Intel 下载</span>
-                    </a>
+        <!-- 三个产品卡片展示 -->
+        <div class="open-products-grid">
+            <!-- OpenPAI 产品卡片 -->
+            <div class="open-product-card">
+                <div class="open-card-content">
+                    <h2 class="open-card-title">OpenPAI</h2>
+                    <p class="open-card-description">以生产级能力，赋能 AI Agent 全流程开发</p>
+                    <a href="#openpai-detail" class="open-card-btn">了解更多 →</a>
                 </div>
             </div>
 
-            <!-- 产品展示区域 -->
-            <div class="product-showcase">
-                <div class="laptop-mockup">
-                    <img src="images/mockups/laptop-interface.svg" alt="OpenChat界面展示" class="laptop-image">
+            <!-- OpenChat 产品卡片 -->
+            <div class="open-product-card">
+                <div class="open-card-content">
+                    <h2 class="open-card-title">OpenChat</h2>
+                    <p class="open-card-description">你的数据，你做主。完全本地化部署，隐私零泄露。强大的文档理解与智能对话，即开即用，无需注册。</p>
+                    <a href="#openchat-detail" class="open-card-btn">了解更多 →</a>
+                </div>
+            </div>
+
+            <!-- OpenStation 产品卡片 -->
+            <div class="open-product-card">
+                <div class="open-card-content">
+                    <h2 class="open-card-title">OpenStation</h2>
+                    <p class="open-card-description">企业级大模型运维中心。统一管理、智能调度、弹性扩容，让大模型服务像管理云服务器一样轻松。</p>
+                    <a href="#openstation-detail" class="open-card-btn">了解更多 →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 页面2: 多元兼容 -->
-    <section id="compatibility" class="page-section compatibility-page">
-        <div class="compatibility-container">
-            <!-- 功能导航 -->
-            <div class="feature-nav">
-                <div class="feature-nav-item active" data-tab="compatibility" style="gap: 10px !important;">
-                    <img src="images/icons/compatibility-icon.svg" alt="多元兼容" class="feature-icon">
-                    <span>多元兼容</span>
-                </div>
-                <div class="feature-nav-item" data-tab="security" style="gap: 10px !important;">
-                    <img src="images/icons/security-icon.svg" alt="安全部署" class="feature-icon">
-                    <span>安全部署</span>
-                </div>
-                <div class="feature-nav-item" data-tab="plugins" style="gap: 10px !important;">
-                    <img src="images/icons/plugin-icon.svg" alt="实用插件" class="feature-icon">
-                    <span>实用插件</span>
-                </div>
-                <div class="feature-nav-item" data-tab="models" style="gap: 10px !important;">
-                    <img src="images/icons/model-icon.svg" alt="模型应用" class="feature-icon">
-                    <span>模型应用</span>
-                </div>
-            </div>
-
-            <!-- 多元兼容内容 -->
-            <div class="tab-content active" id="compatibility-content">
-                <div class="compatibility-content">
-                <div class="content-title" style="gap: 10px !important;">
-                    <img src="images/icons/hexagon-icon.svg" alt="兼容" class="title-icon">
-                    <h1>OpenChat兼容主流云端大模型</h1>
-                </div>
-                    <p class="content-description">
-                        无论是 OpenAI 的强大语言理解能力,还是 Deepseek 的高效推理性能,亦或是硅基流动的创新技术,都能无缝接入;无需在不同平台间切换便能享体验所有模型服务
-                    </p>
-                </div>
-                <div class="product-showcase">
-                    <div class="laptop-mockup">
-                        <img src="images/mockups/dyjr.svg" alt="多元兼容界面展示" class="laptop-image">
-                    </div>
-                </div>
-            </div>
-
-            <!-- 安全部署内容 -->
-            <div class="tab-content" id="security-content">
-                <div class="compatibility-content">
-                    <div class="content-title" style="gap: 10px !important;">
-                        <img src="images/icons/security-icon.svg" alt="安全" class="title-icon">
-                        <h1>OpenChat安全部署解决方案</h1>
-                    </div>
-                    <p class="content-description">
-                        支持企业级安全架构保护，模型支持本地化部署和私有服务器接入，信息安全不上公网。确保用户隐私安全;提供完整的权限管理和log日志,满足企业合规要求
-                    </p>
-                </div>
-                <div class="product-showcase">
-                    <div class="laptop-mockup">
-                        <img src="images/mockups/aqbs.svg" alt="安全部署界面展示" class="laptop-image">
-                    </div>
-                </div>
-            </div>
-
-            <!-- 实用插件内容 -->
-            <div class="tab-content" id="plugins-content">
-                <div class="compatibility-content">
-                    <div class="content-title" style="gap: 10px !important;">
-                        <img src="images/icons/plugin-icon.svg" alt="插件" class="title-icon">
-                        <h1>OpenChat实用插件生态</h1>
-                    </div>
-                    <p class="content-description">
-                        支持定制化插件,涵盖文档处理、离线知识库、敏感词检测以及网络检索等多个插件,增强模型适用范围以满足各类通用场景需求;配置激活即可使用
-                    </p>
-                </div>
-                <div class="product-showcase">
-                    <div class="laptop-mockup">
-                        <img src="images/mockups/sycj.svg" alt="实用插件界面展示" class="laptop-image">
-                    </div>
-                </div>
-            </div>
-
-            <!-- 模型应用内容 -->
-            <div class="tab-content" id="models-content">
-                <div class="compatibility-content">
-                    <div class="content-title" style="gap: 10px !important;">
-                        <img src="images/icons/model-icon.svg" alt="模型" class="title-icon">
-                        <h1>OpenChat智能模型应用</h1>
-                    </div>
-                    <p class="content-description">
-                        集成多种先进AI模型应用,支持文本生成、智能体、AI翻译以及图像OCR识别应用;支持模型输出的调参,确保在不同场景场景下的性能表现,满足专业应用需求
-                    </p>
-                </div>
-                <div class="product-showcase">
-                    <div class="laptop-mockup">
-                        <img src="images/mockups/mxyy.svg" alt="模型应用界面展示" class="laptop-image">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 页面3: 免费开源 -->
-    <section id="opensource" class="page-section opensource-page">
-        <div class="opensource-container">
-            <div class="opensource-content">
-                <div class="opensource-title">
-                    <img src="images/icons/cloud-icon.svg" alt="开源" class="title-icon">
-                    <h1>免费开源</h1>
-                </div>
-                <p class="opensource-description">
-                    OpenChat面相社会开源开放,您不仅可以免费使用本软件,也能在开源网站上看到我们的开发进度,若您有任何疑问和建议,欢迎通过社群与我们联系!
-                </p>
-            </div>
-
-            <div class="opensource-grid">
-                <!-- <div class="grid-section">
-                    <a href="https://fastaistack.oss-cn-beijing.aliyuncs.com/openchat/OpenChatSetup_v1.0.4_win.exe" class="grid-item" target="_blank">
-                        <img src="images/icons/windows-icon.svg" alt="Windows" class="grid-icon">
-                        <span>Windows</span>
-                    </a>
-                    <a href="https://fastaistack.oss-cn-beijing.aliyuncs.com/openchat/OpenChatSetup_v1.0.4_apple.dmg" class="grid-item" target="_blank">
-                        <img src="images/icons/mac-icon.svg" alt="Mac M1" class="grid-icon">
-                        <span>Mac M1</span>
-                    </a>
-                    <a href="https://fastaistack.oss-cn-beijing.aliyuncs.com/openchat/OpenChatSetup_v1.0.4_intel.dmg" class="grid-item" target="_blank">
-                        <img src="images/icons/mac-icon.svg" alt="Mac Intel" class="grid-icon">
-                        <span>Mac Intel</span>
-                    </a>
-                </div> -->
-                <div class="grid-section">
-                    <a href="https://github.com/fastaistack/OpenChat" class="grid-item" target="_blank">
-                        <img src="images/icons/github-icon.svg" alt="GitHub" class="grid-icon">
+    <!-- OpenPAI 详细介绍 -->
+    <section id="openpai-detail" class="page-section open-product-detail-section">
+        <div class="open-detail-hero">
+            <div class="open-detail-hero-content">
+                <h1 class="open-detail-title">OpenPAI</h1>
+                <p class="open-detail-subtitle">让AI应用开发像搭积木一样简单</p>
+                <p class="open-detail-description">OpenPAI 是一个革命性的大模型应用开发平台，专为降低AI应用开发门槛而生。无论你是个人开发者还是企业团队，都能在几分钟内将创意转化为可用的AI应用。支持本地、企业服务器及云端多种部署方式，提供直观的可视化界面，让复杂的模型配置变得像拖拽组件一样简单。告别繁琐的代码编写，专注于你的创新想法！</p>
+                <div class="open-detail-actions">
+                    <a href="https://github.com/fastaistack/OpenPAI" target="_blank" class="open-detail-btn open-detail-btn-primary">
+                        <img src="images/icons/github-icon.svg" alt="GitHub" class="open-btn-icon">
                         <span>GitHub</span>
                     </a>
-                    <a href="https://gitee.com/fastaistack/openchat" class="grid-item" target="_blank">
-                        <img src="images/icons/gitee-icon.svg" alt="Gitee" class="grid-icon">
-                        <span>Gitee</span>
+                    <a href="https://github.com/fastaistack/OpenPAI" target="_blank" class="open-detail-btn open-detail-btn-secondary">
+                        <span>产品主页</span>
                     </a>
-                    <a href="https://xhslink.com/m/4lPKv7h0rkW" class="grid-item" target="_blank">
-                        <img src="images/icons/xiaohongshu-icon.svg" alt="小红书" class="grid-icon">
-                        <span>小红书</span>
-                    </a>
+                </div>
+            </div>
+            <div class="open-detail-hero-image">
+                <img src="images/mockups/openpai.gif" alt="OpenPAI" class="open-detail-gif">
+            </div>
+        </div>
+
+        <div class="open-detail-features">
+            <div class="open-detail-container">
+                <h2 class="open-detail-section-title">核心功能</h2>
+                <div class="open-features-grid">
+                    <div class="open-feature-item">
+                        <div class="open-feature-icon">📡</div>
+                        <h3 class="open-feature-title">零代码开发</h3>
+                        <p class="open-feature-desc">可视化拖拽式开发，无需编写复杂代码，让非技术背景的用户也能轻松构建AI应用</p>
+                    </div>
+                    <div class="open-feature-item">
+                        <div class="open-feature-icon">⚡</div>
+                        <h3 class="open-feature-title">分钟级部署</h3>
+                        <p class="open-feature-desc">从配置到上线，全程自动化，几分钟内完成部署，让想法快速落地</p>
+                    </div>
+                    <div class="open-feature-item">
+                        <div class="open-feature-icon">⚙️</div>
+                        <h3 class="open-feature-title">全环境支持</h3>
+                        <p class="open-feature-desc">本地、企业内网、云端无缝切换，一套代码，处处运行，灵活适配各种场景</p>
+                    </div>
+                    <div class="open-feature-item">
+                        <div class="open-feature-icon">🎨</div>
+                        <h3 class="open-feature-title">智能编排</h3>
+                        <p class="open-feature-desc">智能工作流编排，多模型协同，复杂业务逻辑可视化配置，让AI应用开发更高效</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 页面4: FAQ -->
-    <section id="faq" class="page-section faq-page">
-        <div class="faq-container">
-            <!-- 标题 -->
-            <div class="faq-title">
-                <img src="images/icons/question-icon.svg" alt="常见问题" class="title-icon">
-                <h1>常见问题</h1>
+    <!-- OpenChat 详细介绍 -->
+    <section id="openchat-detail" class="page-section open-product-detail-section">
+        <div class="open-detail-hero">
+            <div class="open-detail-hero-content">
+                <h1 class="open-detail-title">OpenChat</h1>
+                <p class="open-detail-subtitle">你的数据，你做主</p>
+                <p class="open-detail-description">OpenChat 是一个完全开源、完全免费的AI智能助手平台，将数据隐私放在首位。所有数据完全本地化存储和处理，绝不上传到任何第三方服务器。强大的文档理解能力，支持PDF、Word、Excel等多种格式，让AI真正理解你的文档内容。智能对话助手，无需注册，即开即用，让AI成为你工作和学习的得力伙伴。开源透明，社区驱动，自由定制！</p>
+                <div class="open-detail-actions">
+                    <a href="https://github.com/fastaistack/OpenChat" target="_blank" class="open-detail-btn open-detail-btn-primary">
+                        <img src="images/icons/github-icon.svg" alt="GitHub" class="open-btn-icon">
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://fastaistack.github.io/OpenChat/" target="_blank" class="open-detail-btn open-detail-btn-secondary">
+                        <span>产品主页</span>
+                    </a>
+                </div>
             </div>
+            <div class="open-detail-hero-image">
+                <img src="images/mockups/openchat.gif" alt="OpenChat" class="open-detail-gif">
+            </div>
+        </div>
 
-            <!-- FAQ列表 -->
-            <div class="faq-list">
-                <div class="faq-item active">
-                    <div class="faq-question">
-                        <span>OpenChat会收集我的数据吗？</span>
-                        <img src="images/icons/chevron-down-icon.svg" alt="展开" class="faq-icon">
+        <div class="open-detail-features">
+            <div class="open-detail-container">
+                <h2 class="open-detail-section-title">核心功能</h2>
+                <div class="open-features-grid">
+                    <div class="open-feature-item">
+                        <div class="open-feature-icon">🔗</div>
+                        <h3 class="open-feature-title">隐私至上</h3>
+                        <p class="open-feature-desc">100%本地化处理，数据永不离开你的设备，企业级加密保护，让隐私安全成为你的核心竞争力</p>
                     </div>
-                    <div class="faq-answer">
-                        <p>我们仅会收集下载次数用于统计，您使用中形成的任何数据我们不会进行收集。</p>
+                    <div class="open-feature-item">
+                        <div class="open-feature-icon">📚</div>
+                        <h3 class="open-feature-title">深度文档理解</h3>
+                        <p class="open-feature-desc">智能解析PDF、Word、Excel等各类文档，提取关键信息，支持多文档关联分析，让AI真正读懂你的资料</p>
                     </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>我的电脑需要什么配置才能使用OpenChat？</span>
-                        <img src="images/icons/chevron-down-icon.svg" alt="折叠" class="faq-icon">
+                    <div class="open-feature-item">
+                        <div class="open-feature-icon">🚀</div>
+                        <h3 class="open-feature-title">即开即用</h3>
+                        <p class="open-feature-desc">零配置启动，无需注册登录，下载即用，让AI助手触手可及，随时随地开启智能对话</p>
                     </div>
-                    <div class="faq-answer">
-                        <p>Windows版OpenChat适用于安装了64位Windows10与11系统的电脑并拥有8GB以上内存空间。</p>
-                        <p>Mac版OpenChat适用于任何系统版本的MAC（M芯片），以及MACOS在12.5以上的MAC（Intel芯片）</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>如何反馈使用中的问题？</span>
-                        <img src="images/icons/chevron-down-icon.svg" alt="折叠" class="faq-icon">
-                    </div>
-                    <div class="faq-answer">
-                        <p>您可以通过在开源社区留言、私信我们的小红书账号，或通过扫描二维码进入我们的粉丝群与我们取得联系。</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>OpenChat如何收取费用？</span>
-                        <img src="images/icons/chevron-down-icon.svg" alt="折叠" class="faq-icon">
-                    </div>
-                    <div class="faq-answer">
-                        <p>OpenChat本身无需注册且不收取任何费用，但部分服务通过第三方API提供（例如使用云端模型或第三方搜索引擎），使用时您可能需要向API提供者支付费用。</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>OpenChat适用于哪些场景？</span>
-                        <img src="images/icons/chevron-down-icon.svg" alt="折叠" class="faq-icon">
-                    </div>
-                    <div class="faq-answer">
-                        <p>OpenChat支持使用接入不同大模型解决各类问题，支持在本地部署0.5B-7B的小参数模型在私密的场景完成简单任务，也可以接入云端的万亿参数模型解决复杂问款，或使用智能助手来生成特定风格的内容，亦或者使用AI翻译功能翻译您的文件。</p>
+                    <div class="open-feature-item">
+                        <div class="open-feature-icon">🌐</div>
+                        <h3 class="open-feature-title">完全开源</h3>
+                        <p class="open-feature-desc">代码完全开放，社区共同维护，自由定制和扩展，让AI技术真正属于每一个人</p>
                     </div>
                 </div>
             </div>
-
-            <!-- 版权信息 -->
-            <footer class="copyright">
-                <p>OpenChat - 开源私有AI助手</p>
-                <!-- <div class="visitor-counter">
-                    <span class="counter-icon">👥</span>
-                    <span class="counter-text">访客数量：</span>
-                    <span id="visitor-count">加载中...</span>
-                </div> -->
-            </footer>
         </div>
     </section>
 
-    <!-- 二维码模态框 -->
-    <div id="qr-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center; z-index: 2000;">
-        <div style="background: rgba(26, 26, 46, 0.95); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 15px; padding: 30px; text-align: center; max-width: 400px; width: 90%; backdrop-filter: blur(10px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);">
-            <h3 style="color: #ffffff; margin-bottom: 20px; font-size: 1.9rem;">扫码加入社群</h3>
-            <img src="images/mockups/erwei_code.jpg" alt="社群二维码" style="max-width: 300px; width: 100%; height: auto; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);">
-            <p style="color: #e5e7eb; margin-bottom: 20px; line-height: 1.6; font-size: 1.4rem;">
-                扫描二维码加入我们的社群<br>
-                获取最新资讯和技术支持
-            </p>
-            <button onclick="document.getElementById('qr-modal').style.display='none'" style="background: #8b5cf6; color: white; border: none; padding: 12px 30px; border-radius: 25px; cursor: pointer; font-size: 1.4rem; transition: all 0.3s ease; font-family: inherit;">关闭</button>
+    <!-- OpenStation 详细介绍 -->
+    <section id="openstation-detail" class="page-section open-product-detail-section">
+        <div class="open-detail-hero">
+            <div class="open-detail-hero-content">
+                <h1 class="open-detail-title">OpenStation</h1>
+                <p class="open-detail-subtitle">企业级大模型运维中心</p>
+                <p class="open-detail-description">OpenStation 是专为企业和团队打造的企业级大模型部署与管理平台，让大模型服务像管理云服务器一样简单高效。统一管理多个模型，智能调度计算资源，自动扩缩容应对流量波动。完全兼容OpenAI API标准，无缝对接现有系统。内置高性能推理引擎，支持多租户隔离和细粒度权限控制，让企业安全、高效地使用大模型技术，释放AI生产力。</p>
+                <div class="open-detail-actions">
+                    <a href="https://github.com/fastaistack/OpenStation/tree/master" target="_blank" class="open-detail-btn open-detail-btn-primary">
+                        <img src="images/icons/github-icon.svg" alt="GitHub" class="open-btn-icon">
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://github.com/fastaistack/OpenStation/tree/master" target="_blank" class="open-detail-btn open-detail-btn-secondary">
+                        <span>产品主页</span>
+                    </a>
+                </div>
+            </div>
+            <div class="open-detail-hero-image">
+                <img src="images/mockups/OpenStation.gif" alt="OpenStation" class="open-detail-gif">
+            </div>
         </div>
-    </div>
 
-    <!-- 新增：确保先加载 i18n，再加载其它脚本（仅此处为调整） -->
+        <div class="open-detail-features">
+            <div class="open-detail-container">
+                <h2 class="open-detail-section-title">核心功能</h2>
+                <div class="open-features-grid">
+                    <div class="open-feature-item">
+                        <div class="open-feature-icon">🏢</div>
+                        <h3 class="open-feature-title">统一模型中心</h3>
+                        <p class="open-feature-desc">集中管理所有大模型，统一配置、监控和调度，让模型资源利用率最大化，降低运维成本</p>
+                    </div>
+                    <div class="open-feature-item">
+                        <div class="open-feature-icon">🔄</div>
+                        <h3 class="open-feature-title">智能弹性伸缩</h3>
+                        <p class="open-feature-desc">根据实时负载自动扩缩容，智能分配计算资源，确保服务稳定性的同时优化成本</p>
+                    </div>
+                    <div class="open-feature-item">
+                        <div class="open-feature-icon">🔌</div>
+                        <h3 class="open-feature-title">标准API兼容</h3>
+                        <p class="open-feature-desc">完全兼容OpenAI API标准，零代码改造即可接入现有系统，让迁移成本降至最低</p>
+                    </div>
+                    <div class="open-feature-item">
+                        <div class="open-feature-icon">🛡️</div>
+                        <h3 class="open-feature-title">企业级安全</h3>
+                        <p class="open-feature-desc">多租户隔离、细粒度权限控制、审计日志，满足企业合规要求，让大模型服务安全可控</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="copyright">
+        <p class="copyright-text">Fastaistack - 智赋企业，算启新程</p>
+    </footer>
+
+    <!-- 脚本 -->
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/faq.js"></script>
-    
-    <!-- 访客计数器脚本 - 后台统计，不显示 -->
-    <script>
-        // 访客计数器功能
-        async function updateVisitorCount() {
-            try {
-                // 使用FastAPI服务进行后台统计
-                const response = await fetch('http://47.245.62.127:8081/api/visitor', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                });
-                const data = await response.json();
-                
-                // 后台统计，不显示在页面上
-                console.log('访客计数更新成功:', data.count);
-            } catch (error) {
-                // 静默处理错误，不影响页面正常显示
-                console.log('访客计数失败:', error);
-            }
-        }
-        
-        // 页面加载完成后更新访客计数
-        document.addEventListener('DOMContentLoaded', function() {
-            updateVisitorCount();
-        });
-    </script>
 </body>
-
 </html>
