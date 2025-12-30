@@ -28,10 +28,17 @@ function initNavigation() {
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
+            const target = this.getAttribute('target');
             
             // 如果是锚点链接，使用默认行为
             if (href && href.startsWith('#')) {
                 // 让锚点链接使用默认行为，不阻止
+                return;
+            }
+            
+            // 如果是外部链接（http/https）或带有 target="_blank" 的链接，使用默认行为
+            if (target === '_blank' || (href && (href.startsWith('http://') || href.startsWith('https://')))) {
+                // 让外部链接和新窗口链接使用默认行为，不阻止
                 return;
             }
             
