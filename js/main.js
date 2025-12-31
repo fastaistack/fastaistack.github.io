@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initPageTransitions();
     initScrollEffects();
     initDownloadButtons();
+    initScrollIndicator();
+    initScrollSnap();
 });
 
 // 导航功能
@@ -668,4 +670,131 @@ function initCommunityButton() {
             }
         });
     }
+}
+
+// 滚动指示器功能
+function initScrollIndicator() {
+    const scrollDots = document.querySelectorAll('.scroll-dot');
+    const sections = document.querySelectorAll('.page-section');
+    
+    if (scrollDots.length === 0 || sections.length === 0) {
+        return;
+    }
+    
+    // 点击导航点滚动到对应区域
+    scrollDots.forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+            const sectionId = this.getAttribute('data-section');
+            const targetSection = document.getElementById(sectionId);
+            
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+    
+    // 监听滚动事件，更新活动状态
+    let ticking = false;
+    
+    function updateActiveDot() {
+        const scrollPosition = window.scrollY + window.innerHeight / 2;
+        
+        sections.forEach((section, index) => {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                // 移除所有活动状态
+                scrollDots.forEach(dot => dot.classList.remove('active'));
+                
+                // 添加当前活动状态
+                const activeDot = document.querySelector(`.scroll-dot[data-section="${sectionId}"]`);
+                if (activeDot) {
+                    activeDot.classList.add('active');
+                }
+            }
+        });
+        
+        ticking = false;
+    }
+    
+    function onScroll() {
+        if (!ticking) {
+            window.requestAnimationFrame(updateActiveDot);
+            ticking = true;
+        }
+    }
+    
+    // 初始更新
+    updateActiveDot();
+    
+    // 监听滚动
+    window.addEventListener('scroll', onScroll, { passive: true });
+}
+
+// 滚动吸附功能
+function initScrollSnap() {
+    const sections = document.querySelectorAll('.page-section');
+    if (sections.length === 0) {
+        return;
+    }
+    let isScrolling = false;
+    let lastSnappedSection = null;
+    let wheelTimeout = null;
+    
+    function findTargetSection(currentScrollTop, isScrollingDown) {
+        if (isScrollingDown) {
+            // 向下滚动：找到第一个 offsetTop > currentScrollTop 的 section
+            for (let i = 0; i < sections.length; i++) {
+                if (sections[i].offsetTop > currentScrollTop) {
+                    return sections[i];
+                }
+            }
+        } else {
+            // 向上滚动：倒序遍历，找到最后一个 offsetTop < currentScrollTop 的 section
+            for (let i = sections.length - 1; i >= 0; i--) {
+                if (sections[i].offsetTop < currentScrollTop) {
+                    return sections[i];
+                }
+            }
+        }
+        return null;
+    }
+    
+    function snapToSection(targetSection) {
+        if (!targetSection) {
+            return;
+        }
+        lastSnappedSection = targetSection;
+        isScrolling = true;
+        const targetPosition = targetSection.offsetTop;
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+        setTimeout(() => {
+            isScrolling = false;
+        }, 1000);
+    }
+    
+    function handleWheel(e) {
+        if (isScrolling) {
+            return;
+        }
+        const isScrollingDown = e.deltaY > 0;
+        clearTimeout(wheelTimeout);
+        wheelTimeout = setTimeout(() => {
+            if (isScrolling) {
+                return;
+            }
+            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const targetSection = findTargetSection(currentScrollTop, isScrollingDown);
+            if (targetSection && targetSection !== lastSnappedSection) {
+                snapToSection(targetSection);
+            }
+        }, 100);
+    }
+    
+    window.addEventListener('wheel', handleWheel, { passive: true });
 }

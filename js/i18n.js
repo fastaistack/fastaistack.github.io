@@ -142,7 +142,7 @@
       '#openchat-detail .open-feature-item:nth-child(3) .open-feature-desc': '丰富的插件生态支持,支持自定义插件开发',
       '#openchat-detail .open-feature-item:nth-child(4) .open-feature-title': '模型生态',
       '#openchat-detail .open-feature-item:nth-child(4) .open-feature-desc': '多样热门AI模型应用,实现自动优化和调参',
-      '#openchat-detail .open-detail-btn-secondary span': '产品主页',
+      '#openchat-detail .open-detail-btn-secondary span': 'gitee',
       '#openchat-detail .open-detail-section-title': '核心功能',
       // OpenStation 详情
       '#openstation-detail .open-detail-title': 'OpenStation',
@@ -156,11 +156,11 @@
       '#openstation-detail .open-feature-item:nth-child(3) .open-feature-desc': '用户权限控制与 API-Key 管理，保障协作与安全',
       '#openstation-detail .open-feature-item:nth-child(4) .open-feature-title': '负载均衡',
       '#openstation-detail .open-feature-item:nth-child(4) .open-feature-desc': '内置负载均衡机制，确保模型服务的稳定高效',
-      '#openstation-detail .open-detail-btn-secondary span': '产品主页',
+      '#openstation-detail .open-detail-btn-secondary span': 'gitee',
       '#openstation-detail .open-detail-section-title': '核心功能',
       // 详情页通用
       '.open-detail-btn-primary span': 'GitHub',
-      '.open-detail-btn-secondary span': '产品主页',
+      '.open-detail-btn-secondary span': 'gitee',
       '.open-detail-section-title': '核心功能',
       '.copyright-text': 'Fastaistack - 智赋企业，算启新程'
     },
@@ -277,7 +277,7 @@
       '#openpai-detail .open-feature-item:nth-child(3) .open-feature-desc': 'Built-in precise RAG, covering the full AI Agent lifecycle',
       '#openpai-detail .open-feature-item:nth-child(4) .open-feature-title': 'Security & Controllability',
       '#openpai-detail .open-feature-item:nth-child(4) .open-feature-desc': 'Content security + enterprise-grade LLMOps, worry-free compliant O&M',
-      '#openpai-detail .open-detail-btn-secondary span': 'Homepage',
+      '#openpai-detail .open-detail-btn-secondary span': 'gitee',
       '#openpai-detail .open-detail-section-title': 'Core Features',
       // OpenChat detail
       '#openchat-detail .open-detail-title': 'OpenChat',
@@ -291,7 +291,7 @@
       '#openchat-detail .open-feature-item:nth-child(3) .open-feature-desc': 'A rich plugin ecosystem with support for custom plugin development',
       '#openchat-detail .open-feature-item:nth-child(4) .open-feature-title': 'Model Ecosystem',
       '#openchat-detail .open-feature-item:nth-child(4) .open-feature-desc': 'Popular AI models with built-in optimization and tuning',
-      '#openchat-detail .open-detail-btn-secondary span': 'Homepage',
+      '#openchat-detail .open-detail-btn-secondary span': 'gitee',
       '#openchat-detail .open-detail-section-title': 'Core Features',
       // OpenStation detail
       '#openstation-detail .open-detail-title': 'OpenStation',
@@ -305,11 +305,11 @@
       '#openstation-detail .open-feature-item:nth-child(3) .open-feature-desc': 'Access control and API key management for secure collaboration',
       '#openstation-detail .open-feature-item:nth-child(4) .open-feature-title': 'Load Balancing',
       '#openstation-detail .open-feature-item:nth-child(4) .open-feature-desc': 'Built-in load balancing ensures stable and efficient model services',
-      '#openstation-detail .open-detail-btn-secondary span': 'Homepage',
+      '#openstation-detail .open-detail-btn-secondary span': 'gitee',
       '#openstation-detail .open-detail-section-title': 'Core Features',
       // Detail pages common
       '.open-detail-btn-primary span': 'GitHub',
-      '.open-detail-btn-secondary span': 'Homepage',
+      '.open-detail-btn-secondary span': 'gitee',
       '.open-detail-section-title': 'Core Features',
       '.copyright-text': 'Fastaistack - Unleash the AI Era, Make Intelligence Accessible'
     }
